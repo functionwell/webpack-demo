@@ -81,6 +81,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__webpack_logo_svg__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__webpack_logo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__webpack_logo_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__data_xml__);
+
 
 
 
@@ -95,6 +98,8 @@ function component() {
   var myLogo = new Image();
   myLogo.src = __WEBPACK_IMPORTED_MODULE_2__webpack_logo_svg___default.a;
   document.body.appendChild(myLogo);
+
+  console.log(__WEBPACK_IMPORTED_MODULE_3__data_xml___default.a);
 
   return element;
 }
@@ -17264,7 +17269,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(8)(content, options);
+var update = __webpack_require__(10)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -17289,7 +17294,7 @@ exports = module.exports = __webpack_require__(7)(undefined);
 
 
 // module
-exports.push([module.i, ".hello {\r\n    color: red;\r\n    background: url(" + __webpack_require__(0) + ");\r\n}\r\n", ""]);
+exports.push([module.i, "@font-face {\r\n    font-family: 'MyFont';\r\n    src: url(\"" + __webpack_require__(8) + "\") format(\"woff2\"), url('" + __webpack_require__(9) + "') format('woff');\r\n    font-weight: 600;\r\n    font-size: normal;\r\n}\r\n\r\n.hello {\r\n    color: red;\r\n    font-family: 'MyFont';\r\n    background: url(" + __webpack_require__(0) + ");\r\n}\r\n", ""]);
 
 // exports
 
@@ -17380,6 +17385,18 @@ function toComment(sourceMap) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "916d691c52c2e851e1cb7385f62b54b8.woff2";
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "7f30d9a7072b207ff9fa04db4a94ba0c.woff";
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
@@ -17423,7 +17440,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(9);
+var	fixUrls = __webpack_require__(11);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -17736,7 +17753,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 
@@ -17829,6 +17846,12 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = {"note":{"to":["Mary"],"from":["John"],"heading":["Reminder"],"body":["Call Cindy on Tuesday"]}}
 
 /***/ })
 /******/ ]);

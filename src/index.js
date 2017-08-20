@@ -3,6 +3,7 @@ import _ from 'lodash';
 // import Logo from './webpack-logo.svg';
 // import Data from './data.xml';
 import printMe from './print.js';
+import './styles.css';
 
 function component() {
   var element = document.createElement('div');
@@ -25,4 +26,14 @@ function component() {
   return element;
 }
 
-document.body.appendChild(component());
+let element = component();
+document.body.appendChild(element);
+
+if(module.hot) {
+    module.hot.accept('./print.js', function() {
+        console.log('Accepting the updated printMe module');
+        document.body.removeChild(element);
+        element = component();
+        document.body.appendChild(element);
+    });
+}
